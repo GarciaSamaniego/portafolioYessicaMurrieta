@@ -1,0 +1,265 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100vw;
+  background-color: #f26178;
+}
+
+nav a {
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
+  font-size: 1.4rem;
+  text-decoration: none;
+  color: #fff;
+}
+
+nav a:hover {
+  color: #1c355e;
+}
+
+.ym-logo {
+  width: 100px;
+  height: 50px;
+}
+
+.portafolio h2 {
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
+  font-size: 2.2rem;
+  margin: 10px 0 0 10px;
+}
+
+.linea-color {
+  width: 140px;
+  height: 5px;
+  background-color: #f26178;
+  margin: 0 0 0 10px;
+}
+
+.img-contenedor {
+  display: flex;
+  height: auto;
+  overflow-x: scroll;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x proximity;
+}
+
+.img-contenedor img {
+  width: 300px;
+  height: 300px;
+  margin: 5px 5px;
+  cursor: pointer;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.img-contenedor img:hover {
+  opacity: 0.8;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 10px;
+  color: #f1f1f1;
+  font-size: 50px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 700px) {
+  .modal-content {
+    width: 100%;
+  }
+}
+
+#sobre-mi {
+  display: flex;
+  height: 190px;
+  margin: 20px auto;
+  background-color: #1c355e;
+  color: #fff;
+}
+
+#sobre-mi h2 {
+  margin: 10px 0 0 10px;
+  font-size: 1.6rem;
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
+}
+
+#sobre-mi p {
+  width: 90%;
+  margin: 5px 0 0 10px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-size: 1.3rem;
+  line-height: 1.4rem;
+}
+
+.foto-mia {
+  position: relative;
+  bottom: 10px;
+  width: 150px;
+  height: 210px;
+}
+
+#contacto {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: #f26178;
+}
+
+.icon {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin: 5px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.facebook-icon {
+  background-image: url("/img/svg/facebook.svg");
+}
+.instagram-icon {
+  background-image: url("/img/svg/instagram.svg");
+}
+.linkedin-icon {
+  background-image: url("/img/svg/linkedin.svg");
+}
+.correo-icon {
+  background-image: url("/img/svg/correo.svg");
+}
+
+.redes {
+  margin-top: 20px;
+}
+
+.correo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-size: 1.4rem;
+}
+
+@media (min-width: 600px) {
+  #sobre-mi p {
+    font-size: 1.6rem;
+    line-height: 2rem;
+  }
+}
+
+@media (min-width: 760px) {
+  #sobre-mi {
+    padding-left: 20px;
+    padding-top: 20px;
+    height: 300px;
+    margin: 50px auto;
+  }
+
+  #sobre-mi h2 {
+    font-size: 3rem;
+  }
+
+  #sobre-mi p {
+    font-size: 2rem;
+    line-height: 3rem;
+  }
+
+  .foto-mia {
+    width: 290px;
+    height: 360px;
+    bottom: 35px;
+  }
+
+  nav a {
+    font-size: 2rem;
+  }
+
+  #contacto {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 10px;
+  }
+
+  #contacto .correo {
+    margin-left: 0 100px;
+  }
+
+  #contacto p {
+    font-size: 2rem;
+  }
+
+  .icon {
+    width: 40px;
+    height: 40px;
+  }
+  .redes {
+    margin-bottom: 5px;
+  }
+  .correo {
+    margin-left: auto;
+  }
+}
