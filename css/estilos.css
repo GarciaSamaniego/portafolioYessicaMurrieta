@@ -89,11 +89,14 @@ nav a:hover {
 
 .modal-content {
   margin: auto;
-  display: block;
+  display: flex;
   width: 80%;
   max-width: 700px;
   animation-name: zoom;
   animation-duration: 0.6s;
+  justify-content: center;
+  align-items: center;
+  height: 75vh;
 }
 
 @keyframes zoom {
