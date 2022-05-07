@@ -179,19 +179,6 @@ nav a:hover {
   background-repeat: no-repeat;
 }
 
-.facebook-icon {
-  background-image: url("/img/svg/facebook.svg");
-}
-.instagram-icon {
-  background-image: url("/img/svg/instagram.svg");
-}
-.linkedin-icon {
-  background-image: url("/img/svg/linkedin.svg");
-}
-.correo-icon {
-  background-image: url("/img/svg/correo.svg");
-}
-
 .redes {
   margin-top: 20px;
 }
@@ -204,6 +191,10 @@ nav a:hover {
   font-family: "Raleway", sans-serif;
   font-weight: 400;
   font-size: 1.4rem;
+}
+
+a {
+  text-decoration: none;
 }
 
 @media (min-width: 600px) {
